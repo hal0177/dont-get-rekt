@@ -1,6 +1,4 @@
-# Don't Get Rekt
-
-:skull_and_crossbones: :skull_and_crossbones: :skull_and_crossbones:
+# :skull_and_crossbones: Don't Get Rekt :skull_and_crossbones:
 
 ## To undo unwanted approvals ...
 
