@@ -1,27 +1,22 @@
 import { ethers } from "ethers"
 import dotenv from "dotenv"
+import { LedgerSigner } from "@ethersproject/hardware-wallets";
 
 import ERC20_ABI from "./erc20Abi.mjs"
 
 dotenv.config()
 
 const GATE = process.env.GATE
-const PK = process.env.PK
 const TX = process.env.TX
+
 
 const erc20Interface = new ethers.utils.Interface(ERC20_ABI)
 
 const connect = () => {
   const provider = new ethers.providers.JsonRpcProvider(GATE)
-  let signer
-  if(PK) {
-    const owner = new ethers.Wallet(PK)
-    signer = owner.connect(provider)
-    
-    return { provider, signer }
-  }
-
-  return { provider }
+  const signer = new LedgerSigner(provider)
+  
+  return { provider, signer }
 }
 
 const getTx = async (provider) => {

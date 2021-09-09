@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ethersproject/hardware-wallets": "^5.4.0",
     "@openzeppelin/contracts": "^4.3.1",
     "dotenv": "^10.0.0",
     "ethers": "^5.4.6"
