@@ -39,7 +39,7 @@ const approveZero = async () => {
     console.log(`Revoking spending rights from ${ spender } ...`)
     const approvalTx = await token.approve(spender, 0)
     const approved = await approvalTx.wait()
-    console.log(`Success, ${ approved.hash }`)
+    console.log(`Success, ${ approved.transactionHash }`)
   } catch(err) {
     console.log(err.message)
   }
